@@ -1,10 +1,10 @@
-<ion-header>
-  <ion-toolbar>
+<ion-header >
+  <ion-toolbar color="tertiary">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
-      Home
+      หน้าแรก
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,13 +13,24 @@
     <ion-card class="welcome-card">
       <ion-img src="/assets/shapes.svg"></ion-img>
       <ion-card-header>
-        <ion-card-subtitle>Get Started</ion-card-subtitle>
-        <ion-card-title>Welcome to Ionic</ion-card-title>
+        <ion-card-subtitle>alien project</ion-card-subtitle>
+        <ion-card-title>ยินดีตอนรับ</ion-card-title>
       </ion-card-header>
       <ion-card-content>
-        <p>Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps.</p>
+          <ion-spinner *ngIf="loading"></ion-spinner>
+        <div *ngFor="let item of user">
+          <h2> <b>รหัสนักศึกษา:</b> {{ item.name }}</h2>
+        </div>
+       
+       
+
       </ion-card-content>
     </ion-card>
+ 
+   
+   
+
+
     <ion-list lines="none">
       <ion-list-header>
         <ion-label>Resources</ion-label>

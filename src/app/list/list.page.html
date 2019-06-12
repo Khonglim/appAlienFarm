@@ -1,27 +1,79 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="tertiary">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>
-      List
+    <ion-title >
+      รายการ
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-item *ngFor="let item of items">
-      <ion-icon [name]="item.icon" slot="start"></ion-icon>
-      {{item.title}}
-      <div class="item-note" slot="end">
-        {{item.note}}
-      </div>
-    </ion-item>
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="กำลังโหลด...">
+    </ion-refresher-content>
+
+  </ion-refresher>
+
+  <ion-row>
+      <ion-col size="9">
+        <ion-item>
+          <ion-input readonly [(ngModel)]="selectedDate"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button (click)="openDatePicker()">Open</ion-button>
+      </ion-col>
+    </ion-row>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+  <ion-list *ngFor="let item of datauser">
+    
+      <ion-card>
+          <ion-card-header  color="success">
+              <ion-card-subtitle>เข้าโรงเรียน - ออกโรงเรียน</ion-card-subtitle>
+          
+          </ion-card-header>
+        
+          <ion-card-content>
+              <ion-item >
+                  <ion-icon name="clock" slot="start"></ion-icon>
+                  <ion-label>สถานะ:    </ion-label>
+                </ion-item>
+                <ion-item >
+                <ion-label>วันที่:</ion-label>
+                </ion-item>
+                <ion-item >
+                 
+                  <ion-label>เวลา:</ion-label>
+                </ion-item>
+              
+                <ion-item>
+                    <ion-label>ชื่อ:</ion-label>
+                
+                </ion-item>
+           
+          </ion-card-content>
+        </ion-card>
+   
   </ion-list>
-  <!--
-    <div *ngIf="selectedItem" padding>
-      You navigated here from <b>{{selectedItem.title }}</b>
-    </div>
-  -->
+
+
+
 </ion-content>

@@ -1,5 +1,7 @@
 {
   "name": "appAlienFarm",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

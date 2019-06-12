@@ -1,0 +1,35 @@
+<ion-header>
+    <ion-toolbar color="tertiary">
+      <ion-title>เข้าระบบ</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content padding>
+      <ion-card-title style="text-align:center;">
+        <img src="https://res.cloudinary.com/nio/image/upload/v1554485501/AlienProject/school.png" height="100px" width="100px">
+      </ion-card-title>
+      <ion-card>
+          <ion-card-header style="text-align:center;">
+            AlienProject
+          </ion-card-header>
+          <ion-card-content>
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating" style="text-align:left;">ผู้ใช้</ion-label>
+        <ion-input type="text" [(ngModel)]="formLogin.name"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label position="floating" style="text-align:left;">รหัสผ่าน</ion-label>
+        <ion-input type="password" [(ngModel)]="formLogin.password"></ion-input>
+      </ion-item>
+      
+      </ion-list>
+      <br>
+  
+      <ion-button fill="solid" expand="block" color="tertiary" (click)="doLogin(formLogin)" style="text-align:center;">เข้าระบบ</ion-button>
+  
+    
+    </ion-card-content>
+  </ion-card>
+  </ion-content>

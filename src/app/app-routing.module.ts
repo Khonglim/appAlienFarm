@@ -4,8 +4,11 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'auth',
     pathMatch: 'full'
+  },
+  { path: 'auth', 
+    loadChildren: './pages/auth/auth.module#AuthPageModule' 
   },
   {
     path: 'home',
@@ -15,6 +18,7 @@ const routes: Routes = [
     path: 'list',
     loadChildren: './list/list.module#ListPageModule'
   }
+
 ];
 
 @NgModule({
