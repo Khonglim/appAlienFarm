@@ -79,11 +79,7 @@ export class AuthPage implements OnInit {
           await loading.dismiss();
           await alert.present();
         } else {
-          const alert = await this.alertController.create({ header: 'Error',
-          message:'Unknow error on login', buttons: ['OK']  });
-          await loading.dismiss();
-          await alert.present();
-         
+            console.log(err);      
         } 
 
 

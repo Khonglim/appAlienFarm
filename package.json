@@ -36,6 +36,7 @@
     "core-js": "^2.5.4",
     "datepicker-for-ionic": "^1.1.7",
     "ionic4-date-picker": "^0.1.0",
+    "laravel-passport": "0.0.6",
     "moment": "^2.24.0",
     "rxjs": "~6.5.1",
     "tslib": "^1.9.0",

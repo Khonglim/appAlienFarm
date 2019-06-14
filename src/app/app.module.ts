@@ -10,8 +10,14 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { IonicStorageModule } from '@ionic/storage';
 import { HttpClientModule } from '@angular/common/http'; 
-
+import { HttpModule } from '@angular/http';
 import { Ionic4DatepickerModule } from '@logisticinfotech/ionic4-datepicker';
+import { LaravelPassportModule  } from 'laravel-passport';
+
+
+
+
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -22,6 +28,13 @@ import { Ionic4DatepickerModule } from '@logisticinfotech/ionic4-datepicker';
     HttpClientModule,
     IonicStorageModule.forRoot(),
     Ionic4DatepickerModule,
+    HttpModule,
+    LaravelPassportModule.forRoot({
+      apiRoot: 'http://www.alienfarmv2.com',
+      clientId: 1,
+      clientSecret:'u7PSiIg3SBxDpDxENuIl9naW0kF7i1YNtWw3nPz7'
+    })
+    
   ],
   providers: [
     StatusBar,
