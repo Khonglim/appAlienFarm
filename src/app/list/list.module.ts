@@ -5,13 +5,14 @@ import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
 import { Ionic4DatepickerModule } from '@logisticinfotech/ionic4-datepicker';
 import { ListPage } from './list.page';
-
+import { ReactiveFormsModule } from "@angular/forms";
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
     Ionic4DatepickerModule,
+    ReactiveFormsModule,
     RouterModule.forChild([
       {
         path: '',

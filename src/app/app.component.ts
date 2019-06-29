@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { Platform, MenuController, NavController } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
-import { Router } from '@angular/router';
 import { AuthService } from '../app/services/auth.service';
 
 @Component({
@@ -19,10 +18,43 @@ export class AppComponent {
       icon: 'home'
     },
     {
-      title: 'รายการ',
+      title: 'รายการเข้า-ออกโรงเรียน',
       url: '/list',
       icon: 'list'
-    }
+    },
+    {
+      title: 'ตารางเรียน',
+      url: '/class-schedule',
+      icon: 'journal'
+    },
+    {
+      title: 'ผลการเรียน',
+      url: '/grade-report',
+      icon: 'attach'
+    },
+    {
+      title: 'ประชาสัมพันธิ์',
+      url: '/public-relations',
+      icon: 'megaphone'
+    }, {
+      title: 'อาจารย์ประจำชั้น',
+      url: '/floor-teacher',
+      icon: 'person'
+    },
+    {
+      title: 'ติดต่อโรงเรียน',
+      url: '/contact-school',
+      icon: 'school'
+    },
+    {
+      title: 'แจ้งปัญหาการใช้งานแอพ',
+      url: '/report-problems',
+      icon: 'build'
+    },
+
+
+
+    
   ];
 
   constructor(

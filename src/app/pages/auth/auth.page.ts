@@ -79,7 +79,10 @@ export class AuthPage implements OnInit {
           await loading.dismiss();
           await alert.present();
         } else {
-            console.log(err);      
+          const alert = await this.alertController.create({ header: 'ผิดพลาด',
+          message:'ไม่สามารถติดต่อฐานข้อมูลได้', buttons: ['OK']  });
+          await loading.dismiss();
+          await alert.present();  
         } 
 
 

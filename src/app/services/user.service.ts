@@ -21,13 +21,17 @@ export class UserService {
     return this.http.get(`${Service.apiUrl}/user`, { headers }).toPromise()
   }
 
-  async getListData ()
+  async getListData (item: any)
   {
+    let request = {
+      'searchdata': item
+    }
     let auth: any = await this.storage.get('auth');
     let headers: HttpHeaders = new HttpHeaders({
       'Authorization': `Bearer ${auth.access_token}`,
     })
-    return this.http.get(`${Service.apiUrl}/data`, { headers }).toPromise()
+    return this.http.post(`${Service.apiUrl}/searchdata`, request, { headers }).toPromise();
+
   }
 
 

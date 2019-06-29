@@ -17,7 +17,13 @@ const routes: Routes = [
   {
     path: 'list',
     loadChildren: './list/list.module#ListPageModule'
-  }
+  },
+  { path: 'class-schedule', loadChildren: './class-schedule/class-schedule.module#ClassSchedulePageModule' },
+  { path: 'grade-report', loadChildren: './grade-report/grade-report.module#GradeReportPageModule' },
+  { path: 'public-relations', loadChildren: './public-relations/public-relations.module#PublicRelationsPageModule' },
+  { path: 'floor-teacher', loadChildren: './floor-teacher/floor-teacher.module#FloorTeacherPageModule' },
+  { path: 'contact-school', loadChildren: './contact-school/contact-school.module#ContactSchoolPageModule' },
+  { path: 'report-problems', loadChildren: './report-problems/report-problems.module#ReportProblemsPageModule' }
 
 ];
 
